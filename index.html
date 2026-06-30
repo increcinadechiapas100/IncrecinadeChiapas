@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INCRECINA DE CHIAPAS - Mantenimiento y Reparación en Tuxtla Gutiérrez</title>
+<meta name="description" content="Servicio especializado en mantenimiento preventivo y reparación de electrodomésticos y equipos de cómputo en Tuxtla Gutiérrez. Servicio a domicilio con garantía.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+    
+    * {
+        font-family: 'Outfit', sans-serif;
+        scroll-behavior: smooth;
+    }
+    
+    .business-name {
+        font-family: 'Times New Roman', Times, serif !important;
+        color: #000000 !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        line-height: 1.1;
+    }
+    
+    .business-tagline {
+        font-family: 'Arial', sans-serif !important;
+        font-size: calc(0.75rem + 2pt) !important;
+    }
+    
+    @media (max-width: 640px) {
+        .business-name {
+            font-size: 1.75rem !important;
+        }
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(135deg, #0c1e3e 0%, #1e3a8a 50%, #1e40af 100%);
+    }
+    
+    .gradient-blue {
+        background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    }
+    
+    .gradient-text {
+        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .hero-title {
+        color: #001F3F !important;
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        color: #001F3F !important;
+        text-align: center;
+    }
+    
+    .hero-badge {
+        background: rgba(30, 64, 175, 0.6);
+        border: 1px solid rgba(30, 58, 138, 0.8);
+    }
+    
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .hero-pattern {
+        background-image: 
+            radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.15) 0%, transparent 50%);
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    .float-animation {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .fade-in-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .service-icon {
+        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    }
+    
+    .whatsapp-button {
+        background: #25D366;
+        transition: all 0.3s ease;
+    }
+    
+    .whatsapp-button:hover {
+        background: #20BA5A;
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    }
+    
+    .bg-light-blue {
+        background-color: #eff6ff;
+    }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    
+    <!-- Navbar -->
+    <nav class="w-full glass-effect shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-56">
+                <div class="flex items-center">
+                   <!-- Logo al doble de tamaño -->
+                   <img src="img/logo-INCRECINA3.jpg" alt="Logo INCRECINA DE CHIAPAS" class="h-full max-h-56 w-auto object-contain">
+               </div>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#inicio" class="text-slate-700 hover:text-blue-600 font-medium transition">Inicio</a>
+                    <a href="#servicios" class="text-slate-700 hover:text-blue-600 font-medium transition">Servicios</a>
+                    <a href="#proceso" class="text-slate-700 hover:text-blue-600 font-medium transition">Proceso</a>
+                    <a href="#testimonios" class="text-slate-700 hover:text-blue-600 font-medium transition">Testimonios</a>
+                    <a href="#contacto" class="text-slate-700 hover:text-blue-600 font-medium transition">Contacto</a>
+                    <a href="tel:+529601313702" class="gradient-blue text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition">
+                        <i class="fa-solid fa-phone mr-2"></i>Servicio Urgente
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 text-2xl" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#inicio" class="block py-2 text-slate-700 font-medium">Inicio</a>
+                <a href="#servicios" class="block py-2 text-slate-700 font-medium">Servicios</a>
+                <a href="#proceso" class="block py-2 text-slate-700 font-medium">Proceso</a>
+                <a href="#testimonios" class="block py-2 text-slate-700 font-medium">Testimonios</a>
+                <a href="#contacto" class="block py-2 text-slate-700 font-medium">Contacto</a>
+                <a href="tel:+529601313702" class="block text-center gradient-blue text-white px-6 py-3 rounded-lg font-semibold">
+                    <i class="fa-solid fa-phone mr-2"></i>Servicio Urgente
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg hero-pattern pt-12 pb-20 lg:pt-16 lg:pb-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 fade-in-up">
+                    <h2 class="text-5xl lg:text-6xl font-extrabold leading-tight hero-title">
+                        Reparación rápida y profesional
+                    </h2>
+                    <p class="text-xl hero-subtitle leading-relaxed font-medium">
+                        Especialestas en mantenimiento preventivo y reparación especializada en refrigeración, electrónica y equipos de cómputo. Técnicos 100 % calificados y con experiencia comprobable.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/529601313702?text=Hola,%20necesito%20cotizar%20un%20servicio%20de%20reparación" target="_blank" class="whatsapp-button text-white px-8 py-4 rounded-xl font-bold text-lg shadow-2xl flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>Cotiza Gratis
+                        </a>
+                        <a href="tel:+529618566712" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-3xl hover:bg-slate-50 transition flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-phone"></i>961 856 6712
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 pt-4 flex-wrap justify-center lg:justify-start">
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-sm hero-subtitle font-semibold">4.9/5.0</span>
+                        </div>
+                        <div class="text-sm hero-subtitle font-semibold">
+                            <i class="fa-solid fa-shield-check text-green-500 mr-1"></i>+1,200 servicios realizados
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&q=80" 
+                         alt="Técnicos trabajando" 
+                         class="relative rounded-2xl shadow-2xl float-animation border-4 border-white/10">
+                    <div class="absolute -bottom-6 -right-6 glass-effect rounded-2xl p-6 shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-check text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-900 font-bold text-lg">Garantía Total</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Bar -->
+    <section class="bg-white py-12 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text">10+</div>
+                    <p class="text-slate-600 mt-2">Años de experiencia</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text">24/7</div>
+                    <p class="text-slate-600 mt-2">Atención urgente</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text">1,200+</div>
+                    <p class="text-slate-600 mt-2">Clientes satisfechos</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text">100%</div>
+                    <p class="text-slate-600 mt-2">Refacciones y software originales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-20 lg:py-28 bg-light-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block gradient-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    NUESTROS SERVICIOS
+                </div>
+                <h3 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-4">
+                    Soluciones completas para tu hogar y oficina
+                </h3>
+                <p class="text-lg text-slate-600">
+                    Contamos con especialistas en cada área para garantizar la mejor reparación de tus equipos
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Línea Blanca -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-slate-100">
+                    <div class="w-16 h-16 service-icon rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-blender text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-blue-900 mb-4">Aparatos Electrodomésticos y Línea Blanca</h4>
+                    <p class="text-slate-600 mb-6">Especialistas en reparación y mantenimiento en Refrigeración y electrónica con refacciones originales.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Refrigeradores</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Lavadoras</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Hornos de microondas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Ventiladores</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Licuadoras</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Planchas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Pantallas de TV</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Computación -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-slate-100">
+                    <div class="w-16 h-16 service-icon rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-laptop text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-blue-900 mb-4">Computación</h4>
+                    <p class="text-slate-600 mb-6">Servicio técnico especializado para mantener tu equipo funcionando al 100%.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Lap Tops y PC de escritorio</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Instalación de software original</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700 text-sm">MS Office, Antivirus, Adobe y más</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Eliminación de virus</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Limpieza física interna y externa</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Reguladores de voltaje</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">No Breaks</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Compra de Equipos -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-slate-100">
+                    <div class="w-16 h-16 service-icon rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-money-bill-wave text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-blue-900 mb-4">Compra de Equipos</h4>
+                    <p class="text-slate-600 mb-6">¿Tienes equipos que ya no usas? Te damos el mejor precio por ellos.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Refrigeradores descompuestos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Ventiladores descompuestos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Equipos en buenas condiciones físicas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                            <span class="text-slate-700">Pago inmediato en efectivo</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/529618566712?text=Hola,%20quiero%20vender%20mi%20equipo" target="_blank" class="mt-6 block text-center gradient-blue text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                        Vender mi Equipo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ¿Por qué elegirnos? -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        ¿POR QUÉ ELEGIRNOS?
+                    </div>
+                    <h3 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+                        La mejor opción en Tuxtla Gutiérrez
+                    </h3>
+                    <p class="text-lg text-slate-600 mb-8">
+                        Más de 10 años respaldandonos. Somos tu mejor opción para el mantenimiento y reparación de tus equipos.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-house-chimney text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-blue-900 mb-1">Atención a Domicilio</h4>
+                                <p class="text-slate-600">Vamos hasta tu hogar u oficina sin costo adicional para hacer un diagnóstico preliminar de tu electrodoméstico, aparato o equipo para indicarte si es posible repararlo ahí mismo o si es necesario trasladarlo a nuestro Centro de servicio.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-user-graduate text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-blue-900 mb-1">Técnicos Calificados</h4>
+                                <p class="text-slate-600">Personal capacitado y con experiencia comprobable en cada tipo de equipo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-gear text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-blue-900 mb-1">Refacciones y Software Originales</h4>
+                                <p class="text-slate-600">Utilizamos únicamente piezas y software originales para garantizar la funcionalidad del servicio realizado.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-shield-halved text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-blue-900 mb-1">Garantía por Escrito</h4>
+                                <p class="text-slate-600">Todos nuestros servicios incluyen garantía escrita para tu tranquilidad.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-bolt-lightning text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-blue-900 mb-1">Atención Rápida</h4>
+                                <p class="text-slate-600">Servicio el mismo día para atender casos urgentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="img/photo-tecnico.jpg" 
+                         alt="Técnico certificado" 
+                         class="rounded-2xl shadow-2xl">
+                    <div class="absolute top-6 -right-6 bg-white rounded-2xl p-6 shadow-2xl max-w-xs">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-check text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-900 font-bold">Técnico Certificado</p>
+                                <p class="text-slate-600 text-sm">Experiencia comprobable</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Proceso -->
+    <section id="proceso" class="py-20 lg:py-28 bg-light-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block gradient-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    CÓMO TRABAJAMOS
+                </div>
+                <h3 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-4">
+                    Proceso simple en 5 pasos
+                </h3>
+                <p class="text-lg text-slate-600">
+                    Te acompañamos desde el primer contacto hasta que tu equipo quede funcionando perfectamente
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover border border-slate-100 h-full">
+                        <div class="w-16 h-16 gradient-blue rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg">1</div>
+                        <h4 class="text-xl font-bold text-blue-900 mb-2">Contáctanos</h4>
+                        <p class="text-slate-600 text-sm">Llámanos o escríbenos por WhatsApp y cuéntanos tu problema</p>
+                    </div>
+                    <div class="hidden lg:block absolute top-12 -right-3 text-blue-600 text-3xl">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover border border-slate-100 h-full">
+                        <div class="w-16 h-16 gradient-blue rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg">2</div>
+                        <h4 class="text-xl font-bold text-blue-900 mb-2">Diagnóstico</h4>
+                        <p class="text-slate-600 text-sm">Visitamos tu domicilio y revisamos tu equipo sin costo</p>
+                    </div>
+                    <div class="hidden lg:block absolute top-12 -right-3 text-blue-600 text-3xl">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover border border-slate-100 h-full">
+                        <div class="w-16 h-16 gradient-blue rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg">3</div>
+                        <h4 class="text-xl font-bold text-blue-900 mb-2">Cotización</h4>
+                        <p class="text-slate-600 text-sm">Te damos precio fijo sin sorpresas ni costos ocultos</p>
+                    </div>
+                    <div class="hidden lg:block absolute top-12 -right-3 text-blue-600 text-3xl">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover border border-slate-100 h-full">
+                        <div class="w-16 h-16 gradient-blue rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg">4</div>
+                        <h4 class="text-xl font-bold text-blue-900 mb-2">Reparación</h4>
+                        <p class="text-slate-600 text-sm">Reparamos con refacciones originales y garantía</p>
+                    </div>
+                    <div class="hidden lg:block absolute top-12 -right-3 text-blue-600 text-3xl">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover border border-slate-100 h-full">
+                        <div class="w-16 h-16 gradient-blue rounded-2xl flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold shadow-lg">5</div>
+                        <h4 class="text-xl font-bold text-blue-900 mb-2">Entrega</h4>
+                        <p class="text-slate-600 text-sm">Probamos contigo y te damos garantía por escrito</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block gradient-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    TESTIMONIOS
+                </div>
+                <h3 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-4">
+                    Lo que dicen nuestros clientes
+                </h3>
+                <p class="text-lg text-slate-600">
+                    Más de 1,200 clientes satisfechos nos respaldan en Tuxtla Gutiérrez
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-light-blue rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6">"Excelente servicio. Vinieron el mismo día a reparar mi refrigerador y quedó como nuevo. Muy profesionales y precio justo."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="María González" loading="lazy" decoding="async" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-blue-900">María González</p>
+                            <p class="text-sm text-slate-600">Tuxtla Gutiérrez</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="bg-light-blue rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6">"Mi laptop tenía virus y estaba lentísima. La dejaron funcionando perfecto y con antivirus original. 100% recomendados."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="Carlos Méndez" loading="lazy" decoding="async" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-blue-900">Carlos Méndez</p>
+                            <p class="text-sm text-slate-600">Tuxtla Gutiérrez</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="bg-light-blue rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6">"Repararon mi lavadora en 2 horas. El técnico fue muy amable y me explicó todo. Además dan garantía por escrito."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?img=8" alt="Ana López" loading="lazy" decoding="async" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-blue-900">Ana López</p>
+                            <p class="text-sm text-slate-600">Tuxtla Gutiérrez</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 4 -->
+                <div class="bg-light-blue rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6">"Se descompuso mi microondas un domingo y pensé que me quedaría sin servicio. Me contestaron por WhatsApp y el lunes temprano ya estaba arreglado. Súper rápidos."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?img=33" alt="Roberto Hernández" loading="lazy" decoding="async" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-blue-900">Roberto Hernández</p>
+                            <p class="text-sm text-slate-600">Col. Centro, Tuxtla</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 5 -->
+                <div class="bg-light-blue rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6">"Me vendieron mi refri viejo que ya no enfriaba y con ese dinero pude dar el enganche de uno nuevo. Trato honesto y pagan en efectivo al momento."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?img=47" alt="Lucía Morales" loading="lazy" decoding="async" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-blue-900">Lucía Morales</p>
+                            <p class="text-sm text-slate-600">Las Granjas, Tuxtla</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 6 -->
+                <div class="bg-light-blue rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 mb-6">"Les confío todas las computadoras de mi oficina. Mantenimiento preventivo cada 6 meses y nunca hemos tenido problemas. Técnicos muy profesionales."</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/100?img=15" alt="Jorge Díaz" loading="lazy" decoding="async" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="font-bold text-blue-900">Jorge Díaz</p>
+                            <p class="text-sm text-slate-600">Empresario Local</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA dentro de testimonios -->
+            <div class="text-center mt-12">
+                <p class="text-slate-600 mb-4">¿Quieres ser el siguiente cliente satisfecho?</p>
+                <a href="https://wa.me/529601313702?text=Hola,%20vi%20los%20testimonios%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="inline-block whatsapp-button text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg">
+                    <i class="fa-brands fa-whatsapp mr-2"></i>Quiero mi cotización
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contacto con Formulario -->
+    <section id="contacto" class="py-20 lg:py-28 bg-light-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-block gradient-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    CONTÁCTANOS
+                </div>
+                <h3 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-4">
+                    ¿Listo para reparar tu equipo?
+                </h3>
+                <p class="text-lg text-slate-600">
+                    Contáctanos ahora y recibe diagnóstico gratis a domicilio en Tuxtla Gutiérrez
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Formulario -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+                    <h4 class="text-2xl font-bold text-blue-900 mb-6">Solicita tu cotización gratis</h4>
+                    <form id="contact-form" class="space-y-5">
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">Nombre completo</label>
+                            <input type="text" id="nombre" required 
+                                   class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                                   placeholder=" ">
+                        </div>
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" required 
+                                   class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                                   placeholder="123 456 7890">
+                        </div>
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">Tipo de equipo</label>
+                            <select id="equipo" required 
+                                    class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                                <option value="">Selecciona una opción</option>
+                                <option>Refrigerador</option>
+                                <option>Ventilador</option>
+                                <option>Horno de microondas</option>
+                                <option>TV / Pantalla</option>
+                                <option>Laptop / PC</option>
+                                <option>Regulador de voltaje / No Break</option>
+                                <option>Instalación de Software (Aplicaciones)</option>
+                                <option>Otro electrodoméstico o de cómputo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">Describe la falla</label>
+                            <textarea id="falla" rows="4" required
+                                      class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                                      placeholder="Ej: Mi refrigerador no enfría..."></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full whatsapp-button text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>Enviar por WhatsApp
+                        </button>
+                        <p class="text-sm text-slate-500 text-center">Te respondemos en menos de 20 minutos</p>
+                    </form>
+                </div>
+                
+               <!-- Info de contacto -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+                        <h4 class="text-2xl font-bold text-blue-900 mb-6">Contacto directo</h4>
+                        <div class="space-y-5">
+                            <a href="tel:+529601313702" class="flex items-start gap-4 group">
+                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition">
+                                    <i class="fa-solid fa-phone text-blue-600 group-hover:text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500">Llámanos</p>
+                                    <p class="text-lg font-bold text-blue-900">961 856 6712</p>
+                                    <p class="text-sm text-slate-600">(Lun a Vie de 9am a 8pm, Dom de 9am a 2pm)</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://wa.me/529601313702" target="_blank" rel="noopener" class="flex items-start gap-4 group">
+                                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-500 transition">
+                                    <i class="fa-brands fa-whatsapp text-green-600 group-hover:text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500">WhatsApp (Lun a Vie de 9am a 8pm, Dom de 9am a 2pm)</p>
+                                    <p class="text-lg font-bold text-blue-900">960 131 3702</p>
+                                    <p class="text-sm text-slate-600">Respuesta en 20 minutos</p>
+                                </div>
+                            </a>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500">Cobertura</p>
+                                    <p class="text-lg font-bold text-blue-900">Tuxtla Gutiérrez</p>
+                                    <p class="text-sm text-slate-600">Servicio a domicilio sin costo extra</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                       <div class="bg-gradient-blue rounded-2xl p-8 text-slate-900 shadow-lg">
+                           <div class="flex items-center gap-3 mb-4">
+                               <i class="fa-solid fa-bolt-lightning text-3xl text-slate-900"></i>
+                               <h4 class="text-2xl font-bold">Servicio Urgente</h4>
+                       </div>
+                       <p class="mb-4 opacity-90">¿Tu equipo falló y lo necesitas hoy mismo? Atendemos emergencias en menos de 2 horas.</p>
+                       <a href="tel:+529618566712" class="inline-block bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-slate-100 transition">
+                           Llamar Ahora
+                       </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h1 class="business-name !text-white !text-xl whitespace-nowrap mb-2">INCRECINA DE CHIAPAS</h1>
+                    <p class="text-slate-400 text-sm mb-4">Ingeniería en crecimiento nacional</p>
+                    <p class="text-slate-400">Más de 10 años dando servicio especializado en Tuxtla Gutiérrez con garantía por escrito.</p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Servicios</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#servicios" class="hover:text-white transition">Línea Blanca</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition">Computación</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition">Compra de Equipos</a></li>
+                        <li><a href="#proceso" class="hover:text-white transition">Mantenimiento Preventivo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Contacto</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-phone mr-2"></i>961 856 6712</li>
+                        <li><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp (Lun a Vie de 9am a 8pm, Dom de 9am a 2pm)</li>
+                        <li><i class="fa-solid fa-location-dot mr-2"></i>Tuxtla Gutiérrez, Chiapas</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
+                <p>© 2026 INCRECINA DE CHIAPAS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+   
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/529601313702?text=Hola,%20necesito%20información" target="_blank" rel="noopener"
+       class="fixed bottom-6 right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition z-40"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+    </a>
+    
+    <!-- Scripts -->
+    <script>
+        // Menu móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+        
+        // Cerrar menu al hacer click en link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-xmark');
+            });
+        });
+        
+        // Form a WhatsApp
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const equipo = document.getElementById('equipo').value;
+            const falla = document.getElementById('falla').value;
+            
+            const mensaje = `Hola, soy ${nombre}.%0A%0A*Equipo:* ${equipo}%0A*Tel:* ${telefono}%0A*Falla:* ${falla}%0A%0ANecesito cotización.`;
+            window.open(`https://wa.me/529601313702?text=${mensaje}`, '_blank');
+        });
+        
+        // Smooth scroll para anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
